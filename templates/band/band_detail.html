@@ -23,12 +23,12 @@
 
         <div class="card">
             <div class="card-header">
-                <div class="row titlerow">
-                    <div class="col-4">
+                <div class="titlerow d-flex">
+                    <div class="flex-fill">
                         {% trans "Info" %}
                     </div>
                     {% if the_user_is_band_admin or request.user.is_superuser %}
-                        <div class="ms-auto">
+                        <div class="p-0">
                             <a class="btn btn-primary btn-sm" href="{% url 'band-update' pk=band.id %}">{% trans "Edit" %}</a>
                         </div>
                     {% endif %}
@@ -261,7 +261,6 @@
                             <a class="btn btn-primary btn-sm" href="{% url 'member-emails' pk=band.id %}">{% trans "Get Member Emails" %}</a>
 
                         </div>
-                        <hr>
                     </div>
                     <div class="row">
                         <div class="col-12" id="memberlist" hx-get="{% url 'all-members' pk=band.id %}" hx-trigger="load">

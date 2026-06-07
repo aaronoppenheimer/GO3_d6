@@ -19,11 +19,11 @@
 
         <div class="card">
             <div class="card-header">
-                <div class="row titlerow">
-                    <div class="col-4">
+                <div class="titlerow d-flex">
+                    <div class="flex-fill">
                         {% trans "Info" %}
                     </div>
-                    <div class="ms-auto">
+                    <div class="p-0">
                         {% if gig.is_in_trash == False and gig.is_archived == False %}
                             {% if user_has_manage_gig_permission  %}
                                 <a class="btn btn-primary btn-sm" href="{% url 'gig-update' gig.id %}">{% trans "Edit" %}</a>
@@ -219,12 +219,11 @@
         <div class="card mt-4">
             <a id="member-plans" name="member-plans"></a>
             <div class="card-header">
-                <div class="row titlerow">
-                    <div class="col-12">
+                <div class="titlerow d-flex">
+                    <div class="flex-fill">
                         {% trans "Member Plans" %}
                     </div>
-                    <div class="col-12">
-                    <div class="me-auto">
+                    <div class="p-0">
                         <a href="#" onclick="simpleswitch(); return false;" class="btn btn-sm btn-secondary"><i class="fas fa-sync fs-lg"></i>
                         <span id="showing_all" style="display:none">{% trans "Showing All" %}</span>
                         <span id="showing_all_occasional" style="display:none">{% trans "Showing All + Occasional" %}</span>
@@ -269,23 +268,24 @@
                             </span>
                         {% endif %}
                     </div>
-                    </div>
                 </div>
             </div>
             <div class="card-body">
                 {% if request.user.is_superuser or the_user_is_band_admin %}
-                    <div class="row mb-4">
-                        {% for p in plan_list %}
-                            {% if p > 0 %}
-                                <div class="mx-auto">
-                                    {% include "gig/plan_icon.html" with plan_value=p %}
-                                    <span id="count{{p}}">0</span>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                        <div class="mx-auto">
-                            {% include "gig/plan_icon.html" with plan_value=0 %}
-                            <span id="count0">0</span>
+                    <div class="container text-center pb-2">
+                        <div class="row align-items-start">
+                            {% for p in plan_list %}
+                                {% if p > 0 %}
+                                    <div class="col">
+                                        {% include "gig/plan_icon.html" with plan_value=p %}
+                                        <span id="count{{p}}">0</span>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="col">
+                                {% include "gig/plan_icon.html" with plan_value=0 %}
+                                <span id="count0">0</span>
+                            </div>
                         </div>
                     </div>
                 {% endif %}

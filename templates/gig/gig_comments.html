@@ -30,7 +30,7 @@
         <div class="col-md-10 col-12">
             <textarea class="form-control" id="commentinput" name='commenttext' placeholder="{% trans "say your piece!" %}" name="comment_input" rows="2"></textarea>
         </div>
-        <div class="mx-auto">
+        <div class="col-md-2 col-12 text-center">
             <button class="btn btn-primary btn-sm" 
             hx-post="/gig/{{ gig.id }}/comments" hx-target="#gig_commentcard">{% trans "Say it!" %}</button>
         </div>
