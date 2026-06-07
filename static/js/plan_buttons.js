@@ -44,4 +44,4 @@ $.fn.editableform.template = `\
 
 $.fn.editableform.buttons = `\
 <button type="submit" class="editable-submit btn btn-sm btn-primary h-100">ok</button>
-<button type="button" class="editable-cancel btn btn-sm btn-secondary h-100 ml-0">cancel</button>`
+<button type="button" class="editable-cancel btn btn-sm btn-secondary h-100 ms-0">cancel</button>`

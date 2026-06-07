@@ -31,7 +31,7 @@
                         <div class="col-sm-1"></div>
                         <div class="col-sm-5">
                             <div class="dropdown">
-                                <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id='sbk-{{assoc.band.id}}'>
+                                <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" id='sbk-{{assoc.band.id}}'>
                                     {{assoc.default_section.display_name}}
                                 </button>
                                 <div class="dropdown-menu" role="menu" aria-labelledby="sbk-{{assoc.band.id}}">
@@ -106,7 +106,7 @@
                         <div class="col-sm-5">
                             <div class="dropdown">
                                 {% trans "color coding" %}
-                                <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" id='cbk-{{assoc.id}}'>
+                                <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" id='cbk-{{assoc.id}}'>
                                     {% include "member/color.html" %}
                                 </button>
                                 <div class="dropdown-menu" role="menu" aria-labelledby="cbk-{{assoc.band.id}}" style="min-width:10px">

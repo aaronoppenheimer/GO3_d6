@@ -32,7 +32,7 @@
                 {{ form.emails.label_tag }}
                 {% render_field form.emails class="form-control" %}
             </div>
-            <div class="mx-auto mt-4 col-lg-8 col-md-10 col-sm-12 text-right">
+            <div class="mx-auto mt-4 col-lg-8 col-md-10 col-sm-12 text-end">
                 <a class="btn btn-secondary" href="{% url 'band-detail' pk=band.id %}">{% trans "Cancel" %}</a>
                 <input type="submit" class="btn btn-primary" value="{% trans 'Send Invites' %}">
             </div>

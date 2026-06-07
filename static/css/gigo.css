@@ -224,10 +224,10 @@ a {
     border-color: #007bff;
 }
 
-.card-header[data-toggle="collapse"] {
+.card-header[data-bs-toggle="collapse"] {
     cursor: pointer;
 }
-.card-header[data-toggle="collapse"]:after {
+.card-header[data-bs-toggle="collapse"]:after {
     /* font-family: 'Font Awesome 5 Pro'; */
     /* font-weight: 900; */
     font: var(--fa-font-solid);
@@ -237,7 +237,7 @@ a {
     padding-right: .1em;
     float: left;
 }
-.card-header[data-toggle="collapse"].collapsed:after {
+.card-header[data-bs-toggle="collapse"].collapsed:after {
     /* symbol for "collapsed" panels */
     content: "\f067";
 }

@@ -3,7 +3,7 @@
     <div class="row" style="padding-top: 5px; {% cycle '' 'background:#f5f5f5;' %}">
         <div class="col-12">
             <a href="{% url 'member-detail' pk=the_assoc.member.id %}">{{ the_assoc.member.display_name }}</a>
-            <a href="{% url 'member-attendance' pk=the_assoc.band.id member_id=the_assoc.member.id %}" class="ml-2 btn btn-sm btn-outline-secondary" title="{% trans 'View attendance history' %}">
+            <a href="{% url 'member-attendance' pk=the_assoc.band.id member_id=the_assoc.member.id %}" class="ms-2 btn btn-sm btn-outline-secondary" title="{% trans 'View attendance history' %}">
                 <i class="fas fa-history"></i> {% trans "Attendance" %}
             </a>
         </div>
@@ -29,7 +29,7 @@
         {% if the_assoc.band.sections.all|length > 1 %}
             <div class="col-md-2">
                 <div class="dropdown">
-                    <a class="btn btn-outline-secondary btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" id="dropdownMenu{{forloop.counter}}" aria-haspopup="true" aria-expanded="false">
+                    <a class="btn btn-outline-secondary btn-sm dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="dropdownMenu{{forloop.counter}}" aria-haspopup="true" aria-expanded="false">
                         {{ the_assoc.default_section.display_name | truncatechars:8 }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu{{forloop.counter}}">

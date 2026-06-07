@@ -399,7 +399,7 @@
                             $( "<div/>", {
                                 "class": "ch-day lvl-" + obj.level + color,
                                 "title": title,
-                                "data-toggle": "tooltip"
+                                "data-bs-toggle": "tooltip"
                             } ).appendTo(
                                 $( ".ch-month:last .ch-weeks .ch-week:last", this.element )
                             );
@@ -464,7 +464,7 @@
                         $( "<li>", {
                             "class": "ch-lvl lvl-" + i,
                             "title": binLabels[ i ],
-                            "data-toggle": "tooltip"
+                            "data-bs-toggle": "tooltip"
                         } )
                         .appendTo( $( ".ch-lvls", this.element ) );
                         if ( this.settings.coloring ) {
@@ -476,7 +476,7 @@
 
                 // Add tooltips to days and steps
                 if ( this.settings.tooltips.show && typeof $.fn.tooltip === "function" ) {
-                    $( "[data-toggle=\"tooltip\"]", this.element )
+                    $( "[data-bs-toggle=\"tooltip\"]", this.element )
                     .tooltip( this.settings.tooltips.options );
                 }
             }

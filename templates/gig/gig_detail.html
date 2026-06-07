@@ -23,7 +23,7 @@
                     <div class="col-4">
                         {% trans "Info" %}
                     </div>
-                    <div class="ml-auto">
+                    <div class="ms-auto">
                         {% if gig.is_in_trash == False and gig.is_archived == False %}
                             {% if user_has_manage_gig_permission  %}
                                 <a class="btn btn-primary btn-sm" href="{% url 'gig-update' gig.id %}">{% trans "Edit" %}</a>
@@ -200,7 +200,7 @@
                         <div class="col-4">
                             {% trans "Setlist" %}
                         </div>
-                        <div class="ml-auto">
+                        <div class="ms-auto">
                             <a class="btn btn-secondary btn-sm" href="{% url 'gig-print-setlist' gig.id %}" target="new"><i class="fas fa-print"></i>
                             {% trans "Print" %}</a>
                         </div>
@@ -224,7 +224,7 @@
                         {% trans "Member Plans" %}
                     </div>
                     <div class="col-12">
-                    <div class="mr-auto">
+                    <div class="me-auto">
                         <a href="#" onclick="simpleswitch(); return false;" class="btn btn-sm btn-secondary"><i class="fas fa-sync fs-lg"></i>
                         <span id="showing_all" style="display:none">{% trans "Showing All" %}</span>
                         <span id="showing_all_occasional" style="display:none">{% trans "Showing All + Occasional" %}</span>

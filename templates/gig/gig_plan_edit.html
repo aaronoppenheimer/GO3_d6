@@ -24,8 +24,8 @@
 
 
                 {% if assoc.is_multisectional and band.sections.all|length > 1 %}
-                    <div class="dropdown mr-2">
-                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" role="button" data-toggle="dropdown" id="sel-{{plan.id}}" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown me-2">
+                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" role="button" data-bs-toggle="dropdown" id="sel-{{plan.id}}" aria-haspopup="true" aria-expanded="false">
                             <span class="htmx-indicator-replace">
                                 {% if section == None %}
                                     {% trans "section" %}...  <span class="caret"></span>

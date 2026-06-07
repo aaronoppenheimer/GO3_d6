@@ -28,7 +28,7 @@
                         {% trans "Info" %}
                     </div>
                     {% if the_user_is_band_admin or request.user.is_superuser %}
-                        <div class="ml-auto">
+                        <div class="ms-auto">
                             <a class="btn btn-primary btn-sm" href="{% url 'band-update' pk=band.id %}">{% trans "Edit" %}</a>
                         </div>
                     {% endif %}
@@ -214,7 +214,7 @@
                         </div>
                     {% endif %}
                     {% if the_user_is_band_admin or request.user.is_superuser %}
-                        <div class="col-sm-4 col-6 pr-0 text-right">
+                        <div class="col-sm-4 col-6 pr-0 text-end">
                             <a class="btn btn-primary btn-sm" href="{% url 'member-invite' bk=band.id %}">{% trans "Invite Members" %}</a>
                         </div>
                     {% endif %}
@@ -248,7 +248,7 @@
 
         {% if the_user_is_band_admin or request.user.is_superuser %}
             <div class="mt-4 card">
-                <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <div class="card-header collapsed" data-bs-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                     <a class="card-title titlerow">
                         {% trans "Member Admin" %}
                     </a>
@@ -272,7 +272,7 @@
             </div>
 
             <div class="mt-4 card">
-                <div class="card-header collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                <div class="card-header collapsed" data-bs-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
                     <a class="card-title titlerow">
                         {% trans "Band Statistics" %}
                     </a>

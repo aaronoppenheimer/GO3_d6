@@ -27,13 +27,13 @@
     </div>
 
     <div class="form-group row">
-        <div class="col-lg-9 ml-auto">
+        <div class="col-lg-9 ms-auto">
             <button type="submit" class="btn btn-primary">{% trans "Login" %}</button>
             <a href="{% url 'member-password-reset' %}">{% trans "Forgot password?" %}</a>
         </div>
     </div>
     <div class="form-group row">
-        <div class="col-lg-9 ml-auto">
+        <div class="col-lg-9 ms-auto">
             {% trans "Not a member?" %}
             <a href="{% url 'member-signup' %}">{% trans "Sign Up!" %}</a>
         </div>
@@ -46,8 +46,8 @@
 
 <div class="mb-3 text-center">
     <div class="dropdown" >
-        <button class="btn btn-outline-secondary dropdown-toggle" style="min-width: 160px;" type="button" data-toggle="dropdown" aria-expanded="false">
-            {% trans "Language" %} <i class="fas fa-language fa-lg ml-1"></i>
+        <button class="btn btn-outline-secondary dropdown-toggle" style="min-width: 160px;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Language" %} <i class="fas fa-language fa-lg ms-1"></i>
         </button>
         <div class="dropdown-menu">
             {% for code, _ in LANGUAGES %}

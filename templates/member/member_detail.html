@@ -22,7 +22,7 @@
                         {% trans "Info" %}
                     </div>
                     {% if member_is_me or user.is_superuser %}
-                        <div class="ml-auto">
+                        <div class="ms-auto">
                             <a class="btn btn-primary btn-sm" href="{% url 'member-update' pk=member.id %}">{% trans "Edit" %}</a>
                         </div>
                     {% endif %}
@@ -192,7 +192,7 @@
                             {% trans "Preferences" %}
                         </div>
                         {% if user.id == member.id or user.is_superuser %}
-                            <div class="ml-auto">
+                            <div class="ms-auto">
                                 <a class="btn btn-primary btn-sm" href="{% url 'member-prefs-update' pk=member.id %}">{% trans "Edit" %}</a>
                             </div>
                         {% endif %}
@@ -321,7 +321,7 @@
                         {% if member.api_key %}
                         <div class="row">
                             <div class="col-1"></div>
-                            <div class="col-11"><code class="ml-3">{{ member.api_key }}</code></div>
+                            <div class="col-11"><code class="ms-3">{{ member.api_key }}</code></div>
                         </div>
                         {% endif %}
                     </div>
